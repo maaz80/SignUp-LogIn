@@ -49,6 +49,7 @@ function App() {
   };
 
   const handleLogout = () => {
+    localStorage.setItem('isLogin', 'false');
     setUser(null);
   };
 
@@ -61,8 +62,8 @@ function App() {
   };
 
   return (
-  <div>
-    <Navbar/>
+  <div className='poppins-regular'>
+    <Navbar />
       <Routes>
         <Route path="/login" element={<Login onLogin={handleLogin} />} />
         <Route path="/register" element={<Register onRegister={handleRegister} />} />
